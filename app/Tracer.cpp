@@ -73,9 +73,14 @@ void Tracer::run() {
   rightwheel_count = rightWheel.getCount();   // 右モータの角位置を取得
   if (leftwheel_count >= 360 && rightwheel_count >= 360)
   {
-    leftWheel.setCount(leftwheel_count);
-    rightWheel.setCount(rightwheel_count);
+    // leftWheel.setCount(leftwheel_count);
+    // rightWheel.setCount(rightwheel_count);
+    printf("leftwheel_count : %d\n", leftwheel_count);    //
+    printf("rightwheel_count : %d\n", rightwheel_count);  // 角位置の観測値
 
     wup_tsk(MAIN_TASK);
+
+    printf("leftWheel.getCount : %d\n", leftWheel.getCount);    //
+    printf("rightWheel.getCount : %d\n", rightWheel.getCount);  // 角位置の実測値
   }
 }
