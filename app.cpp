@@ -1,5 +1,6 @@
 #include "app.h" // <1>
 #include "Tracer.h" // <2>
+#include <stdio.h>
 
 using namespace ev3api;
 
@@ -16,6 +17,7 @@ void main_task(intptr_t unused) { // <1>
   slp_tsk();  // メインタスクの起床待ち
 
   stp_cyc(TRACER_CYC); // <3>
+  printf("stop cyclickhandler!!\n")
   tracer.terminate(); // <4>
   ext_tsk(); // <5>
 }
