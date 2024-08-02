@@ -41,12 +41,12 @@ void Tracer::run() {
     }
   }
 
-  leftwheel_count = leftWheel.getCount() / ;     // 左モータの角位置を取得
-  rightwheel_count = rightwheel.getCount();   // 右モータの角位置を取得
+  leftwheel_count = leftWheel.getCount();     // 左モータの角位置を取得
+  rightwheel_count = rightWheel.getCount();   // 右モータの角位置を取得
   if (leftwheel_count >= 360 && rightwheel_count >= 360)
   {
-    leftwheel.setCount(leftwheel_count);
-    rightwheel.setCount(rightwheel_count);
+    leftWheel.setCount(leftwheel_count);
+    rightWheel.setCount(rightwheel_count);
 
     wup_tsk(MAIN_TASK);
   }
