@@ -13,6 +13,7 @@ void Tracer::terminate() {
 
 void Tracer::run() {
   static unsigned char str_flag = false;  // 走行スタートのフラグ
+  static unsigned char stp_flag = false;  // 走行ストップのフラグ
   int16_t dist; // 超音波センサの距離
 
   const float Kp = 0.50;  // Pゲイン
@@ -41,6 +42,10 @@ void Tracer::run() {
     }
     return;
   }
+  else if (stp_flag == true)
+  {
+    return;
+  }
 
   leftwheel_count = leftWheel.getCount();     // 左モータの角位置を取得
   rightwheel_count = rightWheel.getCount();   // 右モータの角位置を取得
@@ -48,6 +53,7 @@ void Tracer::run() {
   {
     leftWheel.setCount(leftwheel_count);
     rightWheel.setCount(rightwheel_count);
+    stp_flag = true;
 
     wup_tsk(MAIN_TASK);
   }
