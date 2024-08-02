@@ -18,7 +18,7 @@ void main_task(intptr_t unused) { // <1>
 
   stp_cyc(TRACER_CYC); // <3>
   printf("stop cyclickhandler!!\n");
-  tracer.terminate(); // <4>
+  
   ext_tsk(); // <5>
 }
 
