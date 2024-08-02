@@ -17,7 +17,7 @@ void main_task(intptr_t unused) { // <1>
   slp_tsk();  // メインタスクの起床待ち
 
   stp_cyc(TRACER_CYC); // <3>
-  printf("stop cyclickhandler!!\n")
+  printf("stop cyclickhandler!!\n");
   tracer.terminate(); // <4>
   ext_tsk(); // <5>
 }
