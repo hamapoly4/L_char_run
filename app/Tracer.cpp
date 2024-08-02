@@ -73,7 +73,7 @@ void Tracer::run() {
   rightwheel_count = rightWheel.getCount();   // 右モータの角位置を取得
   if (leftwheel_count >= 360 && rightwheel_count >= 360)
   {
-    tracer.terminate(); // 左右のモータの停止
+    terminate(); // 左右のモータの停止
     // leftWheel.setCount(leftwheel_count);
     // rightWheel.setCount(rightwheel_count);
     printf("leftwheel_count : %d\n", leftwheel_count);    //
