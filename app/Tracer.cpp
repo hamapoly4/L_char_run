@@ -37,8 +37,8 @@ void Tracer::run() {
     if (-1 < dist && dist < 5)
     {
       str_flag = true;
-      return;
     }
+    return;
   }
 
   leftwheel_count = leftWheel.getCount();     // 左モータの角位置を取得
