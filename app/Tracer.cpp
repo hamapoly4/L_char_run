@@ -80,7 +80,7 @@ void Tracer::run() {
 
     wup_tsk(MAIN_TASK);
 
-    printf("leftWheel.getCount : %d\n", leftWheel.getCount);    //
-    printf("rightWheel.getCount : %d\n", rightWheel.getCount);  // 角位置の実測値
+    printf("leftWheel.getCount : %d\n", leftWheel.getCount());    //
+    printf("rightWheel.getCount : %d\n", rightWheel.getCount());  // 角位置の実測値
   }
 }
