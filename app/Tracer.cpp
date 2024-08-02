@@ -8,6 +8,7 @@ Tracer::Tracer():
 void Tracer::terminate() {
   leftWheel.stop();  // <1>
   rightWheel.stop();
+  printf("RasPike Stop!!\n");
 }
 
 void Tracer::run() {
