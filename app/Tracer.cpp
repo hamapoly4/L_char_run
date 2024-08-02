@@ -68,6 +68,7 @@ void Tracer::run() {
   // RasPike run!!
   leftWheel.setPWM(pwm + turn);
   rightWheel.setPWM(pwm - turn);
+  printf("RasPike run!!\n");
   
   i++;
   if (i >= 10)
